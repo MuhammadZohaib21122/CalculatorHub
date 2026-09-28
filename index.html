@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en" data-theme="dark" data-palette="midnight">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="description" content="CalcNest brings 46 beautifully simple calculators together. Calculate calories, convert currencies, plan your finances and more — all in one place." />
+  <title>CalcNest — Little calculations. Big clarity.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="extra-calculators.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <!-- Silk Aurora: decorative, low-contrast color that drifts with the mouse. -->
+  <div class="cursor-aura" id="cursorAura" aria-hidden="true">
+    <span class="cursor-aura-ribbon cursor-aura-ribbon-one"></span>
+    <span class="cursor-aura-ribbon cursor-aura-ribbon-two"></span>
+    <span class="cursor-aura-ribbon cursor-aura-ribbon-three"></span>
+  </div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="CalcNest home">
+        <span class="brand-mark" aria-hidden="true"><span class="brand-mark-dots">✦</span></span>
+        <span>calc<span class="brand-accent">nest</span><span class="brand-period">.</span></span>
+      </a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a class="nav-link current" href="#home">Home</a>
+        <a class="nav-link" href="#calculators">All calculators</a>
+        <a class="nav-link" href="#about">About</a>
+      </nav>
+      <div class="header-actions">
+        <details class="theme-menu" id="themeMenu">
+          <summary class="theme-trigger" aria-label="Choose a color theme"><span class="theme-trigger-icon" aria-hidden="true">✦</span><span class="theme-trigger-text">Theme</span><span class="theme-chevron" aria-hidden="true">⌄</span></summary>
+          <div class="theme-panel" aria-label="Color themes">
+            <div class="theme-panel-title">MAKE IT YOURS <span>✧</span></div>
+            <p>Pick your atmosphere</p>
+            <div class="theme-choices" role="group" aria-label="Choose a color palette">
+              <button type="button" class="theme-choice" data-palette-option="midnight" aria-pressed="true"><span class="swatch swatch-midnight" aria-hidden="true"></span><span>Midnight</span><span class="theme-check" aria-hidden="true">✓</span></button>
+              <button type="button" class="theme-choice" data-palette-option="aurora" aria-pressed="false"><span class="swatch swatch-aurora" aria-hidden="true"></span><span>Aurora</span><span class="theme-check" aria-hidden="true">✓</span></button>
+              <button type="button" class="theme-choice" data-palette-option="royal" aria-pressed="false"><span class="swatch swatch-royal" aria-hidden="true"></span><span>Royal plum</span><span class="theme-check" aria-hidden="true">✓</span></button>
+              <button type="button" class="theme-choice" data-palette-option="amber" aria-pressed="false"><span class="swatch swatch-amber" aria-hidden="true"></span><span>Amber noir</span><span class="theme-check" aria-hidden="true">✓</span></button>
+            </div>
+          </div>
+        </details>
+        <a class="header-cta" href="#calculators">Explore tools <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero-wrap" aria-labelledby="heroTitle">
+      <div class="container">
+        <div class="hero">
+          <div class="hero-mesh" aria-hidden="true"></div>
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <div class="hero-eyebrow"><span class="eyebrow-star" aria-hidden="true">✦</span> THE ART OF EVERYDAY CLARITY</div>
+              <h1 id="heroTitle">A little math. <span class="hero-highlight">A lot of magic<span class="highlight-dot">.</span></span></h1>
+              <p>Your everyday questions deserve beautiful answers. Discover thoughtful, effortless calculators for the moments that matter.</p>
+              <div class="hero-actions"><a href="#calculators" class="primary-btn">Explore all calculators <span aria-hidden="true">↗</span></a><a href="#popular" class="hero-secondary">See popular tools <span aria-hidden="true">↓</span></a></div>
+              <div class="hero-proof"><span><span aria-hidden="true">✓</span> Always free</span><span><span aria-hidden="true">✓</span> No sign-up</span><span><span aria-hidden="true">✓</span> Made for everyone</span></div>
+            </div>
+            <div class="hero-art" aria-label="Decorative preview of a percentage calculation">
+              <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+              <div class="floating-pill floating-pill-top" aria-hidden="true"><span class="pill-glyph">✳</span><span>Math, made easy.</span></div>
+              <div class="preview-card">
+                <div class="preview-top"><span class="preview-tag"><span class="preview-tag-dot"></span> QUICK CALCULATE</span><span class="preview-dots" aria-hidden="true">•••</span></div>
+                <div class="preview-question">What is 20% of 2,400?</div>
+                <div class="preview-equation">2,400 <span>×</span> 0.20</div>
+                <div class="preview-divider"></div>
+                <div class="preview-label">YOUR ANSWER</div>
+                <div class="preview-answer">480<span class="answer-sparkle" aria-hidden="true">✳</span></div>
+                <div class="preview-foot"><span class="preview-check" aria-hidden="true">✓</span> All figured out. Nice and easy.</div>
+              </div>
+              <div class="floating-pill floating-pill-bottom" aria-hidden="true"><span class="pill-glyph pill-glyph-purple">↗</span><span><strong>16</strong> helpful tools</span></div>
+              <div class="hero-doodle" aria-hidden="true">✦</div>
+            </div>
+          </div>
+          <div class="hero-side-note" aria-hidden="true">CALCULATE • CONVERT • PLAN • REPEAT</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ambient-ribbon" aria-label="Calculate, convert, plan, discover"><div class="ribbon-track" aria-hidden="true"><span>CALCULATE <b>✳</b> CONVERT <b>✳</b> CREATE <b>✳</b> DISCOVER <b>✳</b></span><span>CALCULATE <b>✳</b> CONVERT <b>✳</b> CREATE <b>✳</b> DISCOVER <b>✳</b></span><span>CALCULATE <b>✳</b> CONVERT <b>✳</b> CREATE <b>✳</b> DISCOVER <b>✳</b></span><span>CALCULATE <b>✳</b> CONVERT <b>✳</b> CREATE <b>✳</b> DISCOVER <b>✳</b></span></div></div>
+
+    <section id="popular" class="popular-section container" aria-labelledby="popularTitle">
+      <div class="popular-heading"><div><span class="section-kicker">A GOOD PLACE TO START</span><h2 id="popularTitle">What brings you here today?</h2></div><span class="popular-hint">Your favorites, one click away <span aria-hidden="true">↗</span></span></div>
+      <div class="popular-grid">
+        <button class="popular-card popular-calories" data-tool="calories" type="button"><span class="popular-icon" aria-hidden="true">♥</span><span class="popular-copy"><span class="popular-overline">FEEL YOUR BEST</span><strong>Calorie Calculator</strong><span>Find your daily calorie goal</span></span><span class="popular-arrow" aria-hidden="true">↗</span></button>
+        <button class="popular-card popular-currency" data-tool="currency" type="button"><span class="popular-icon" aria-hidden="true">⇄</span><span class="popular-copy"><span class="popular-overline">GOING GLOBAL?</span><strong>Currency Converter</strong><span>Exchange rates, made simple</span></span><span class="popular-arrow" aria-hidden="true">↗</span></button>
+        <button class="popular-card popular-percent" data-tool="percentage" type="button"><span class="popular-icon" aria-hidden="true">%</span><span class="popular-copy"><span class="popular-overline">QUICK MATH</span><strong>Percentage Calculator</strong><span>The answer, without the fuss</span></span><span class="popular-arrow" aria-hidden="true">↗</span></button>
+      </div>
+    </section>
+
+    <section class="discovery-section" aria-labelledby="discoveryTitle">
+      <div class="container discovery-wrap">
+        <div class="discovery-intro">
+          <span class="section-kicker">EXPLORE YOUR OWN WAY</span>
+          <h2 id="discoveryTitle">Follow your curiosity<span>.</span></h2>
+          <p>Four beautiful ways to get started. Pick the one that feels right.</p>
+        </div>
+        <div class="discovery-rail" aria-label="Featured calculators">
+          <button type="button" class="discovery-tile discovery-tile-one" data-tool="bmi">
+            <span class="discovery-tile-top"><span class="discovery-number">01</span><span class="discovery-topic">WELLNESS</span></span>
+            <span class="discovery-emblem" aria-hidden="true">✺</span>
+            <strong>Find your<br>balance</strong>
+            <span class="discovery-tile-bottom"><span>BMI calculator</span><b aria-hidden="true">↗</b></span>
+          </button>
+          <button type="button" class="discovery-tile discovery-tile-two" data-tool="compound">
+            <span class="discovery-tile-top"><span class="discovery-number">02</span><span class="discovery-topic">TOMORROW</span></span>
+            <span class="discovery-emblem" aria-hidden="true">✧</span>
+            <strong>Grow your<br>possibilities</strong>
+            <span class="discovery-tile-bottom"><span>Compound interest</span><b aria-hidden="true">↗</b></span>
+          </button>
+          <button type="button" class="discovery-tile discovery-tile-three" data-tool="unit">
+            <span class="discovery-tile-top"><span class="discovery-number">03</span><span class="discovery-topic">EVERYDAY</span></span>
+            <span class="discovery-emblem" aria-hidden="true">⇄</span>
+            <strong>Make the<br>switch</strong>
+            <span class="discovery-tile-bottom"><span>Unit converter</span><b aria-hidden="true">↗</b></span>
+          </button>
+          <button type="button" class="discovery-tile discovery-tile-four" data-tool="savings">
+            <span class="discovery-tile-top"><span class="discovery-number">04</span><span class="discovery-topic">GOALS</span></span>
+            <span class="discovery-emblem" aria-hidden="true">✦</span>
+            <strong>Dream a<br>little bigger</strong>
+            <span class="discovery-tile-bottom"><span>Savings planner</span><b aria-hidden="true">↗</b></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="calculators" class="library container" aria-labelledby="libraryTitle">
+      <div class="section-head"><div><span class="section-kicker">THE WHOLE TOOLBOX</span><h2 id="libraryTitle">One place. <span>All the answers.</span></h2><p>Pick a category, find your tool, and get straight to the good part.</p></div><div class="tool-count"><span class="count-icon" aria-hidden="true">✳</span><div><strong id="visibleCount">46</strong><span> tools to explore</span></div></div></div>
+      <div class="toolbar"><div id="categoryTabs" class="category-tabs" role="group" aria-label="Filter calculators by category"></div><label class="search-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="10.9" cy="10.9" r="7"/><path d="m16.1 16.1 4.4 4.4"/></svg><input id="searchInput" type="search" placeholder="Search calculators..." autocomplete="off" aria-label="Search calculators"/><kbd>/</kbd></label></div>
+      <div id="calculatorGrid" class="calculator-grid"></div>
+      <div id="emptyState" class="empty-state" hidden><div class="empty-icon" aria-hidden="true">⌕</div><h3>Nothing here... yet.</h3><p>Try another search, or take a look at all our tools.</p><button id="resetFilters" class="secondary-btn" type="button">Show all calculators</button></div>
+    </section>
+
+    <section id="about" class="about-section" aria-labelledby="aboutTitle"><div class="container"><div class="about-panel"><div class="about-art" aria-hidden="true"><div class="about-ring about-ring-one"></div><div class="about-ring about-ring-two"></div><span>✳</span></div><div class="about-copy"><span class="section-kicker">GOOD TO KNOW</span><h2 id="aboutTitle">Less guessing. <em>More doing.</em></h2><p>CalcNest brings the everyday tools you need into one nice, simple space. Most calculations happen right in your browser. Currency conversion fetches online reference rates, which may differ from transaction rates.</p><a href="#calculators" class="about-link">Find your calculator <span aria-hidden="true">↗</span></a></div></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="#home" aria-label="CalcNest home"><span class="brand-mark" aria-hidden="true"><span class="brand-mark-dots">✦</span></span><span>calc<span class="brand-accent">nest</span><span class="brand-period">.</span></span></a><p>© <span id="copyrightYear"></span> CalcNest. Made to make sense.</p><a class="footer-back" href="#top">Back to top ↑</a></div></footer>
+
+  <dialog id="toolDialog" class="tool-dialog" aria-labelledby="dialogTitle" aria-describedby="dialogDescription"><div class="dialog-header"><div class="dialog-copy"><button type="button" id="backHome" class="dialog-back">← Back to home</button><span id="dialogCategory" class="dialog-category"></span><h2 id="dialogTitle"></h2><p id="dialogDescription"></p></div><button id="closeDialog" class="close-btn" type="button" aria-label="Close calculator"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div id="toolBody" class="tool-body"></div><p class="dialog-disclaimer" id="toolDisclaimer"></p></dialog>
+  <a class="back-to-top" href="#top" id="backToTop" aria-label="Back to top">↑<span>TOP</span></a>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
